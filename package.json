@@ -33,9 +33,11 @@
   "types": "./index.d.ts",
   "peerDependencies": {
     "@types/jquery": "^3.2.12",
-    "bootstrap-daterangepicker": "https://github.com/intuilab/daterangepicker.git",
     "jquery": "^3.2.1",
     "moment": "^2.19.1"
+  },
+  "dependencies": {
+    "bootstrap-daterangepicker": "https://github.com/intuilab/daterangepicker.git"
   },
   "devDependencies": {
     "@angular/cli": "1.5.0",
