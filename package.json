@@ -22,13 +22,6 @@
   },
   "homepage": "https://github.com/evansmwendwa/ng2-daterangepicker#readme",
   "license": "MIT",
-  "files": [
-    "README.md",
-    "index.js",
-    "index.d.ts",
-    "daterangepicker.component.css",
-    "lib/*"
-  ],
   "main": "./index.js",
   "types": "./index.d.ts",
   "dependencies": {
