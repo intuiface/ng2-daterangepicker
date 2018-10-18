@@ -32,7 +32,7 @@
   "main": "./index.js",
   "types": "./index.d.ts",
   "dependencies": {
-    "bootstrap-daterangepicker": "^2.1.25"
+    "bootstrap-daterangepicker": "https://github.com/intuilab/daterangepicker.git"
   },
   "peerDependencies": {
     "@types/jquery": "^3.2.12",
