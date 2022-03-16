@@ -29,11 +29,6 @@
   ],
   "main": "./index.js",
   "types": "./index.d.ts",
-  "peerDependencies": {
-    "@types/jquery": "^3.2.12",
-    "jquery": "^3.2.1",
-    "moment": "^2.19.1"
-  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.6",
     "@angular-devkit/core": "^13.2.6",
@@ -70,6 +65,10 @@
   },
   "dependencies": {
     "@angular/animations": "^13.2.6",
+    "@types/jquery": "^3.2.12",
+    "bootstrap-daterangepicker": "github:intuilab/daterangepicker",
+    "jquery": "^3.2.1",
+    "moment": "^2.19.1",
     "tslib": "^2.0.0"
   }
 }
