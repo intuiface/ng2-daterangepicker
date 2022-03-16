@@ -1,3 +1,4 @@
+/.angular/cache
 system-config.js*
 src/**/*.js
 src/**/*.map
