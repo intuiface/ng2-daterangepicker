@@ -10,6 +10,11 @@
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
+    "paths": {
+      "ng2-daterangepicker": [
+        "projects/ng2-daterangepicker/src/public-api.ts"
+      ]
+    },
     "experimentalDecorators": true,
     "target": "es2015",
     "typeRoots": [

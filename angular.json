@@ -99,9 +99,40 @@
           }
         }
       }
+    },
+    "ng2-daterangepicker": {
+      "projectType": "library",
+      "root": "projects/ng2-daterangepicker",
+      "sourceRoot": "projects/ng2-daterangepicker/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng2-daterangepicker/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng2-daterangepicker/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng2-daterangepicker/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng2-daterangepicker/src/test.ts",
+            "tsConfig": "projects/ng2-daterangepicker/tsconfig.spec.json",
+            "karmaConfig": "projects/ng2-daterangepicker/karma.conf.js"
+          }
+        }
+      }
     }
   },
-  "defaultProject": "ci",
+  "defaultProject": "ng2-daterangepicker",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
