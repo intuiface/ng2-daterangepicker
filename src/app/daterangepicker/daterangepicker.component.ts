@@ -1,6 +1,6 @@
 import { Directive, OnInit, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
 import { KeyValueDiffer, KeyValueDiffers, ElementRef, OnDestroy, DoCheck  } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 import { DaterangepickerConfig } from './config.service';
 
 import * as $ from "jquery";
