@@ -5,8 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "build-prod": "ng build --aot --prod",
+    "build": "cd projects && cd ng2-daterangepicker && npm run build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,15 +19,6 @@
   },
   "homepage": "https://github.com/evansmwendwa/ng2-daterangepicker#readme",
   "license": "MIT",
-  "files": [
-    "README.md",
-    "index.js",
-    "index.d.ts",
-    "daterangepicker.component.css",
-    "lib/*"
-  ],
-  "main": "./index.js",
-  "types": "./index.d.ts",
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.6",
     "@angular-devkit/core": "^13.2.6",

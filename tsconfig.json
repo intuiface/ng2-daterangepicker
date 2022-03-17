@@ -10,9 +10,11 @@
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "ng2-daterangepicker": [
-        "projects/ng2-daterangepicker/src/public-api.ts"
+        "projects/ng2-daterangepicker/ng2-daterangepicker",
+        "projects/ng2-daterangepicker"
       ]
     },
     "experimentalDecorators": true,
@@ -21,8 +23,12 @@
       "node_modules/@types"
     ],
     "lib": [
-      "es2016",
+      "es2018",
       "dom"
     ]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }

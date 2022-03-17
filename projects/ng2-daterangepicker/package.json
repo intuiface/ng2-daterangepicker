@@ -5,6 +5,10 @@
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
   },
+  "scripts": {
+    "build": "ng build && npm run postbuild",
+    "postbuild":"xcopy /s \"daterangepicker.component.css\" \"..\\..\\dist\\ng2-daterangepicker\" \/Y"
+  },
   "dependencies": {
     "tslib": "^2.3.0"
   }

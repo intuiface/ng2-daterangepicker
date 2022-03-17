@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DaterangepickerConfig } from '../../projects/ng2-daterangepicker/src/lib/config.service';
 
 import * as moment from 'moment';
+import { DaterangepickerConfig } from '../../../ng2-daterangepicker/src/public-api';
 
 @Component({
     selector: 'app-root',
