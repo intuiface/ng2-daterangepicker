@@ -28,7 +28,6 @@ npm-debug.log
 typings
 
 # Ignore build and dist folders
-dist
 build
 
 # =========================

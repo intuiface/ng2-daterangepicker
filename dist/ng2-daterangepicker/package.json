@@ -1,0 +1,31 @@
+{
+  "name": "ng2-daterangepicker",
+  "version": "2.1.1",
+  "peerDependencies": {
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/ng2-daterangepicker.mjs",
+  "es2020": "fesm2020/ng2-daterangepicker.mjs",
+  "esm2020": "esm2020/ng2-daterangepicker.mjs",
+  "fesm2020": "fesm2020/ng2-daterangepicker.mjs",
+  "fesm2015": "fesm2015/ng2-daterangepicker.mjs",
+  "typings": "ng2-daterangepicker.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./ng2-daterangepicker.d.ts",
+      "esm2020": "./esm2020/ng2-daterangepicker.mjs",
+      "es2020": "./fesm2020/ng2-daterangepicker.mjs",
+      "es2015": "./fesm2015/ng2-daterangepicker.mjs",
+      "node": "./fesm2015/ng2-daterangepicker.mjs",
+      "default": "./fesm2020/ng2-daterangepicker.mjs"
+    }
+  },
+  "sideEffects": false
+}
