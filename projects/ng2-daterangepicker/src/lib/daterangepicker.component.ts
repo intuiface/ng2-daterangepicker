@@ -49,53 +49,58 @@ export class DaterangePickerComponent implements AfterViewInit, OnDestroy, DoChe
         this.targetOptions = Object.assign({}, this.config.settings, this.options);
 
         // cast $ to any to avoid jquery type checking
-        (<any>$(this.input.nativeElement)).daterangepicker(this.targetOptions, this.callback.bind(this));
-
-        this.datePicker = (<any>$(this.input.nativeElement)).data('daterangepicker');
+        if ($)
+        {
+            (<any>$(this.input.nativeElement)).daterangepicker(this.targetOptions, this.callback.bind(this));
+            this.datePicker = (<any>$(this.input.nativeElement)).data('daterangepicker');
+        }
     }
 
     attachEvents() {
-        $(this.input.nativeElement).on('cancel.daterangepicker',
-            (e:any, picker:any) => {
-                let event = { event: e, picker: picker };
-                this.cancelDaterangepicker.emit(event);
-            }
-        );
+        if ($)
+        {
+            $(this.input.nativeElement).on('cancel.daterangepicker',
+                (e:any, picker:any) => {
+                    let event = { event: e, picker: picker };
+                    this.cancelDaterangepicker.emit(event);
+                }
+            );
 
-        $(this.input.nativeElement).on('apply.daterangepicker',
-            (e:any, picker:any) => {
-                let event = { event: e, picker: picker };
-                this.applyDaterangepicker.emit(event);
-            }
-        );
+            $(this.input.nativeElement).on('apply.daterangepicker',
+                (e:any, picker:any) => {
+                    let event = { event: e, picker: picker };
+                    this.applyDaterangepicker.emit(event);
+                }
+            );
 
-        $(this.input.nativeElement).on('hideCalendar.daterangepicker',
-            (e:any, picker:any) => {
-                let event = { event: e, picker: picker };
-                this.hideCalendarDaterangepicker.emit(event);
-            }
-        );
+            $(this.input.nativeElement).on('hideCalendar.daterangepicker',
+                (e:any, picker:any) => {
+                    let event = { event: e, picker: picker };
+                    this.hideCalendarDaterangepicker.emit(event);
+                }
+            );
 
-        $(this.input.nativeElement).on('showCalendar.daterangepicker',
-            (e:any, picker:any) => {
-                let event = { event: e, picker: picker };
-                this.showCalendarDaterangepicker.emit(event);
-            }
-        );
+            $(this.input.nativeElement).on('showCalendar.daterangepicker',
+                (e:any, picker:any) => {
+                    let event = { event: e, picker: picker };
+                    this.showCalendarDaterangepicker.emit(event);
+                }
+            );
 
-        $(this.input.nativeElement).on('hide.daterangepicker',
-            (e:any, picker:any) => {
-                let event = { event: e, picker: picker };
-                this.hideDaterangepicker.emit(event);
-            }
-        );
+            $(this.input.nativeElement).on('hide.daterangepicker',
+                (e:any, picker:any) => {
+                    let event = { event: e, picker: picker };
+                    this.hideDaterangepicker.emit(event);
+                }
+            );
 
-        $(this.input.nativeElement).on('show.daterangepicker',
-            (e:any, picker:any) => {
-                let event = { event: e, picker: picker };
-                this.showDaterangepicker.emit(event);
-            }
-        );
+            $(this.input.nativeElement).on('show.daterangepicker',
+                (e:any, picker:any) => {
+                    let event = { event: e, picker: picker };
+                    this.showDaterangepicker.emit(event);
+                }
+            );
+        }
     }
 
     private callback(start?: any, end?: any, label?: any): void {

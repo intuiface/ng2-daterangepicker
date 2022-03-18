@@ -1,12 +1,13 @@
 {
   "name": "ng2-daterangepicker",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
-    "@angular/core": "^13.2.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
+    "@angular/core": "^13.2.0",
+    "@types/jquery": "^3.2.12",
+    "bootstrap-daterangepicker": "github:intuilab/daterangepicker",
+    "jquery": "^3.2.1",
+    "moment": "^2.19.1"
   },
   "module": "fesm2015/ng2-daterangepicker.mjs",
   "es2020": "fesm2020/ng2-daterangepicker.mjs",
@@ -27,5 +28,8 @@
       "default": "./fesm2020/ng2-daterangepicker.mjs"
     }
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
 }

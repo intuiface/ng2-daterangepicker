@@ -1,15 +1,17 @@
 {
   "name": "ng2-daterangepicker",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
-    "@angular/core": "^13.2.0"
+    "@angular/core": "^13.2.0",
+    "@types/jquery": "^3.2.12",
+    "bootstrap-daterangepicker": "github:intuilab/daterangepicker",
+    "jquery": "^3.2.1",
+    "moment": "^2.19.1",
+    "tslib": "^2.3.0"
   },
   "scripts": {
     "build": "ng build && npm run postbuild",
-    "postbuild":"xcopy /s \"daterangepicker.component.css\" \"..\\..\\dist\\ng2-daterangepicker\" \/Y"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
+    "postbuild": "xcopy /s \"daterangepicker.component.css\" \"..\\..\\dist\\ng2-daterangepicker\" /Y"
   }
 }
