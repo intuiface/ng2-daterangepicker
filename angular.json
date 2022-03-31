@@ -58,7 +58,9 @@
               "projects/app/src/assets"
             ],
             "styles": [
-              "projects/app/src/styles.css"
+              "projects/app/src/styles.css",
+              "node_modules/bootstrap-daterangepicker/daterangepicker.css",
+              "projects/ng2-daterangepicker/daterangepicker.component.css"
             ],
             "scripts": []
           },
