@@ -1,7 +1,6 @@
 import * as i0 from '@angular/core';
 import { Injectable, EventEmitter, Directive, Input, Output, NgModule } from '@angular/core';
-import * as $ from 'jquery';
-import $__default from 'jquery';
+import $ from 'jquery';
 import 'bootstrap-daterangepicker';
 
 class DaterangepickerConfig {
@@ -21,12 +20,12 @@ class DaterangepickerConfig {
                 + '</style>');
         }
     }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DaterangepickerConfig, deps: [], target: i0.ɵɵFactoryTarget.Injectable }); }
+    static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DaterangepickerConfig }); }
 }
-DaterangepickerConfig.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: DaterangepickerConfig, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
-DaterangepickerConfig.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: DaterangepickerConfig });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: DaterangepickerConfig, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DaterangepickerConfig, decorators: [{
             type: Injectable
-        }], ctorParameters: function () { return []; } });
+        }], ctorParameters: () => [] });
 
 class DaterangePickerComponent {
     constructor(input, config, differs) {
@@ -56,31 +55,31 @@ class DaterangePickerComponent {
     render() {
         this.targetOptions = Object.assign({}, this.config.settings, this.options);
         // cast $ to any to avoid jquery type checking
-        $__default(this.input.nativeElement).daterangepicker(this.targetOptions, this.callback.bind(this));
-        this.datePicker = $__default(this.input.nativeElement).data('daterangepicker');
+        $(this.input.nativeElement).daterangepicker(this.targetOptions, this.callback.bind(this));
+        this.datePicker = $(this.input.nativeElement).data('daterangepicker');
     }
     attachEvents() {
-        $__default(this.input.nativeElement).on('cancel.daterangepicker', (e, picker) => {
+        $(this.input.nativeElement).on('cancel.daterangepicker', (e, picker) => {
             let event = { event: e, picker: picker };
             this.cancelDaterangepicker.emit(event);
         });
-        $__default(this.input.nativeElement).on('apply.daterangepicker', (e, picker) => {
+        $(this.input.nativeElement).on('apply.daterangepicker', (e, picker) => {
             let event = { event: e, picker: picker };
             this.applyDaterangepicker.emit(event);
         });
-        $__default(this.input.nativeElement).on('hideCalendar.daterangepicker', (e, picker) => {
+        $(this.input.nativeElement).on('hideCalendar.daterangepicker', (e, picker) => {
             let event = { event: e, picker: picker };
             this.hideCalendarDaterangepicker.emit(event);
         });
-        $__default(this.input.nativeElement).on('showCalendar.daterangepicker', (e, picker) => {
+        $(this.input.nativeElement).on('showCalendar.daterangepicker', (e, picker) => {
             let event = { event: e, picker: picker };
             this.showCalendarDaterangepicker.emit(event);
         });
-        $__default(this.input.nativeElement).on('hide.daterangepicker', (e, picker) => {
+        $(this.input.nativeElement).on('hide.daterangepicker', (e, picker) => {
             let event = { event: e, picker: picker };
             this.hideDaterangepicker.emit(event);
         });
-        $__default(this.input.nativeElement).on('show.daterangepicker', (e, picker) => {
+        $(this.input.nativeElement).on('show.daterangepicker', (e, picker) => {
             let event = { event: e, picker: picker };
             this.showDaterangepicker.emit(event);
         });
@@ -95,7 +94,7 @@ class DaterangePickerComponent {
     }
     destroyPicker() {
         try {
-            $__default(this.input.nativeElement).data('daterangepicker').remove();
+            $(this.input.nativeElement).data('daterangepicker').remove();
         }
         catch (e) {
             console.log(e.message);
@@ -116,15 +115,15 @@ class DaterangePickerComponent {
             }
         }
     }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DaterangePickerComponent, deps: [{ token: i0.ElementRef }, { token: DaterangepickerConfig }, { token: i0.KeyValueDiffers }], target: i0.ɵɵFactoryTarget.Directive }); }
+    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "18.2.13", type: DaterangePickerComponent, selector: "[daterangepicker]", inputs: { options: "options" }, outputs: { selected: "selected", cancelDaterangepicker: "cancelDaterangepicker", applyDaterangepicker: "applyDaterangepicker", hideCalendarDaterangepicker: "hideCalendarDaterangepicker", showCalendarDaterangepicker: "showCalendarDaterangepicker", hideDaterangepicker: "hideDaterangepicker", showDaterangepicker: "showDaterangepicker" }, ngImport: i0 }); }
 }
-DaterangePickerComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: DaterangePickerComponent, deps: [{ token: i0.ElementRef }, { token: DaterangepickerConfig }, { token: i0.KeyValueDiffers }], target: i0.ɵɵFactoryTarget.Directive });
-DaterangePickerComponent.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "12.0.0", version: "13.2.6", type: DaterangePickerComponent, selector: "[daterangepicker]", inputs: { options: "options" }, outputs: { selected: "selected", cancelDaterangepicker: "cancelDaterangepicker", applyDaterangepicker: "applyDaterangepicker", hideCalendarDaterangepicker: "hideCalendarDaterangepicker", showCalendarDaterangepicker: "showCalendarDaterangepicker", hideDaterangepicker: "hideDaterangepicker", showDaterangepicker: "showDaterangepicker" }, ngImport: i0 });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: DaterangePickerComponent, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DaterangePickerComponent, decorators: [{
             type: Directive,
             args: [{
                     selector: '[daterangepicker]',
                 }]
-        }], ctorParameters: function () { return [{ type: i0.ElementRef }, { type: DaterangepickerConfig }, { type: i0.KeyValueDiffers }]; }, propDecorators: { options: [{
+        }], ctorParameters: () => [{ type: i0.ElementRef }, { type: DaterangepickerConfig }, { type: i0.KeyValueDiffers }], propDecorators: { options: [{
                 type: Input
             }], selected: [{
                 type: Output
@@ -143,11 +142,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.6", ngImpor
             }] } });
 
 class Daterangepicker {
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: Daterangepicker, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
+    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.2.13", ngImport: i0, type: Daterangepicker, declarations: [DaterangePickerComponent], exports: [DaterangePickerComponent] }); }
+    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: Daterangepicker, providers: [DaterangepickerConfig] }); }
 }
-Daterangepicker.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: Daterangepicker, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-Daterangepicker.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: Daterangepicker, declarations: [DaterangePickerComponent], exports: [DaterangePickerComponent] });
-Daterangepicker.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: Daterangepicker, providers: [DaterangepickerConfig] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.6", ngImport: i0, type: Daterangepicker, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: Daterangepicker, decorators: [{
             type: NgModule,
             args: [{
                     //imports: [FormsModule],

@@ -28,5 +28,5 @@ export declare class DaterangePickerComponent implements AfterViewInit, OnDestro
     ngOnDestroy(): void;
     ngDoCheck(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DaterangePickerComponent, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<DaterangePickerComponent, "[daterangepicker]", never, { "options": "options"; }, { "selected": "selected"; "cancelDaterangepicker": "cancelDaterangepicker"; "applyDaterangepicker": "applyDaterangepicker"; "hideCalendarDaterangepicker": "hideCalendarDaterangepicker"; "showCalendarDaterangepicker": "showCalendarDaterangepicker"; "hideDaterangepicker": "hideDaterangepicker"; "showDaterangepicker": "showDaterangepicker"; }, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<DaterangePickerComponent, "[daterangepicker]", never, { "options": { "alias": "options"; "required": false; }; }, { "selected": "selected"; "cancelDaterangepicker": "cancelDaterangepicker"; "applyDaterangepicker": "applyDaterangepicker"; "hideCalendarDaterangepicker": "hideCalendarDaterangepicker"; "showCalendarDaterangepicker": "showCalendarDaterangepicker"; "hideDaterangepicker": "hideDaterangepicker"; "showDaterangepicker": "showDaterangepicker"; }, never, never, false, never>;
 }

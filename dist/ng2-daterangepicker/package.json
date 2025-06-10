@@ -9,23 +9,17 @@
     "jquery": "^3.2.1",
     "moment": "^2.19.1"
   },
-  "module": "fesm2015/ng2-daterangepicker.mjs",
-  "es2020": "fesm2020/ng2-daterangepicker.mjs",
-  "esm2020": "esm2020/ng2-daterangepicker.mjs",
-  "fesm2020": "fesm2020/ng2-daterangepicker.mjs",
-  "fesm2015": "fesm2015/ng2-daterangepicker.mjs",
-  "typings": "ng2-daterangepicker.d.ts",
+  "module": "fesm2022/ng2-daterangepicker.mjs",
+  "typings": "index.d.ts",
   "exports": {
     "./package.json": {
       "default": "./package.json"
     },
     ".": {
-      "types": "./ng2-daterangepicker.d.ts",
-      "esm2020": "./esm2020/ng2-daterangepicker.mjs",
-      "es2020": "./fesm2020/ng2-daterangepicker.mjs",
-      "es2015": "./fesm2015/ng2-daterangepicker.mjs",
-      "node": "./fesm2015/ng2-daterangepicker.mjs",
-      "default": "./fesm2020/ng2-daterangepicker.mjs"
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/ng2-daterangepicker.mjs",
+      "esm": "./esm2022/ng2-daterangepicker.mjs",
+      "default": "./fesm2022/ng2-daterangepicker.mjs"
     }
   },
   "sideEffects": false,
