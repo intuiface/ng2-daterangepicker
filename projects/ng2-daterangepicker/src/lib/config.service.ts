@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 declare var require:any;
 import $ from 'jquery';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DaterangepickerConfig {
 
     public settings: any;
