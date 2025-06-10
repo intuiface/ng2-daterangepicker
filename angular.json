@@ -135,7 +135,6 @@
       }
     }
   },
-  "defaultProject": "ng2-daterangepicker",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
