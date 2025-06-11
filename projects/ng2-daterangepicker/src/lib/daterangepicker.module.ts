@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 //import { FormsModule }   from '@angular/forms';
 import { DaterangePickerComponent } from './daterangepicker.component';
 import { DaterangepickerConfig } from './config.service';
@@ -10,4 +10,15 @@ import { DaterangepickerConfig } from './config.service';
     exports: [DaterangePickerComponent]
 
 })
-export class Daterangepicker { }
+export class Daterangepicker {
+
+    static forRoot(config = {}): ModuleWithProviders<Daterangepicker> {
+    return {
+      ngModule: Daterangepicker,
+      providers: [
+        {provide: DaterangepickerConfig, useValue: config}
+      ]
+    };
+  }
+
+}
