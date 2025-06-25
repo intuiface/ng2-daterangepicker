@@ -12,11 +12,13 @@ import { DaterangepickerConfig } from './config.service';
 })
 export class Daterangepicker {
 
-    static forRoot(config = {}): ModuleWithProviders<Daterangepicker> {
+    static forRoot(config: Partial<DaterangepickerConfig>): ModuleWithProviders<Daterangepicker> {
     return {
       ngModule: Daterangepicker,
       providers: [
-        {provide: DaterangepickerConfig, useValue: config}
+        {
+          provide: DaterangepickerConfig,
+          useValue: { ...new DaterangepickerConfig(), ...config }}
       ]
     };
   }

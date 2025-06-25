@@ -124,7 +124,7 @@ class DaterangePickerComponent {
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DaterangePickerComponent, decorators: [{
             type: Directive,
             args: [{
-                    selector: '[daterangepicker]',
+                    selector: '[daterangepicker]'
                 }]
         }], ctorParameters: () => [{ type: i0.ElementRef }, { type: DaterangepickerConfig }, { type: i0.KeyValueDiffers }], propDecorators: { options: [{
                 type: Input
@@ -145,11 +145,14 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImpo
             }] } });
 
 class Daterangepicker {
-    static forRoot(config = {}) {
+    static forRoot(config) {
         return {
             ngModule: Daterangepicker,
             providers: [
-                { provide: DaterangepickerConfig, useValue: config }
+                {
+                    provide: DaterangepickerConfig,
+                    useValue: { ...new DaterangepickerConfig(), ...config }
+                }
             ]
         };
     }

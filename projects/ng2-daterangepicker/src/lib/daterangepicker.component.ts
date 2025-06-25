@@ -8,7 +8,7 @@ import 'bootstrap-daterangepicker';
 
 
 @Directive({
-    selector: '[daterangepicker]',
+    selector: '[daterangepicker]'
 })
 export class DaterangePickerComponent implements AfterViewInit, OnDestroy, DoCheck {
 
