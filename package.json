@@ -24,18 +24,11 @@
     "@angular-devkit/core": "^19.2.15",
     "@angular-devkit/schematics": "^19.2.15",
     "@angular/cli": "^19.2.15",
-    "@angular/common": "^19.2.14",
     "@angular/compiler": "^19.2.14",
     "@angular/compiler-cli": "^19.2.14",
-    "@angular/core": "^19.2.14",
-    "@angular/forms": "^19.2.14",
-    "@angular/platform-browser": "^19.2.14",
-    "@angular/platform-browser-dynamic": "^19.2.14",
-    "@angular/platform-server": "^19.2.14",
-    "@angular/router": "^19.2.14",
     "@types/jasmine": "2.5.54",
+    "@types/jquery": "^3.2.12",
     "@types/node": "^12.11.1",
-    "codelyzer": "^6.0.2",
     "core-js": "^2.4.1",
     "jasmine-core": "~2.7.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -55,11 +48,19 @@
     "typescript": "^5.8.3",
     "zone.js": "~0.15.1"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@angular/common": "^19.2.14",
+    "@angular/core": "^19.2.14",
+    "@angular/forms": "^19.2.14",
     "@angular/animations": "^19.2.14",
-    "@types/jquery": "^3.2.12",
+    "@angular/platform-browser": "^19.2.14",
+    "@angular/platform-browser-dynamic": "^19.2.14",
+    "@angular/platform-server": "^19.2.14",
+    "@angular/router": "^19.2.14"
+  },
+  "dependencies": {
     "bootstrap-daterangepicker": "github:intuilab/daterangepicker#analytics",
-    "jquery": "^3.2.1",
+    "jquery": "^3.6.0",
     "moment": "^2.19.1",
     "tslib": "^2.0.0"
   }

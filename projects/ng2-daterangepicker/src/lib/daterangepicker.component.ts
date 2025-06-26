@@ -1,9 +1,7 @@
-import { Directive, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
-import { KeyValueDiffers, ElementRef, OnDestroy, DoCheck  } from '@angular/core';
+import { Directive, AfterViewInit, Input, Output, EventEmitter, KeyValueDiffers, ElementRef, OnDestroy, DoCheck } from '@angular/core';
 import { DaterangepickerConfig } from './config.service';
 
-import $ from "jquery";
-import * as moment from 'moment';
+declare let $: any;
 import 'bootstrap-daterangepicker';
 
 
@@ -50,7 +48,10 @@ export class DaterangePickerComponent implements AfterViewInit, OnDestroy, DoChe
         this.targetOptions = Object.assign({}, this.config.settings, this.options);
 
         // cast $ to any to avoid jquery type checking
-        (<any>$(this.input.nativeElement)).daterangepicker(this.targetOptions, this.callback.bind(this));
+        const inputElement = $(this.input.nativeElement);
+        console.log(inputElement);
+        (inputElement as any).daterangepicker(this.targetOptions, this.callback.bind(this));
+        //(<any>$(this.input.nativeElement)).daterangepicker(this.targetOptions, this.callback.bind(this));
         this.datePicker = $(this.input.nativeElement).data('daterangepicker');    
     }
 

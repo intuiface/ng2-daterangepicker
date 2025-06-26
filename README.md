@@ -21,7 +21,7 @@ Please note and install the following peerDependencies if necessary for your set
 ```json
 "peerDependencies": {
 "@types/jquery": "^3.2.12",
-"jquery": "^3.2.1",
+"jquery": "^3.6.0",
 "moment": "^2.19.1"
 }
 ```

@@ -1,5 +1,4 @@
-import { AfterViewInit, EventEmitter } from '@angular/core';
-import { KeyValueDiffers, ElementRef, OnDestroy, DoCheck } from '@angular/core';
+import { AfterViewInit, EventEmitter, KeyValueDiffers, ElementRef, OnDestroy, DoCheck } from '@angular/core';
 import { DaterangepickerConfig } from './config.service';
 import 'bootstrap-daterangepicker';
 import * as i0 from "@angular/core";
