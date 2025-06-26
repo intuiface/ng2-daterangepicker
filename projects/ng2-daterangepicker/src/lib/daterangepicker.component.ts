@@ -49,9 +49,7 @@ export class DaterangePickerComponent implements AfterViewInit, OnDestroy, DoChe
 
         // cast $ to any to avoid jquery type checking
         const inputElement = $(this.input.nativeElement);
-        console.log(inputElement);
         (inputElement as any).daterangepicker(this.targetOptions, this.callback.bind(this));
-        //(<any>$(this.input.nativeElement)).daterangepicker(this.targetOptions, this.callback.bind(this));
         this.datePicker = $(this.input.nativeElement).data('daterangepicker');    
     }
 

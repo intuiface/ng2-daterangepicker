@@ -59,9 +59,7 @@ class DaterangePickerComponent {
         this.targetOptions = Object.assign({}, this.config.settings, this.options);
         // cast $ to any to avoid jquery type checking
         const inputElement = $(this.input.nativeElement);
-        console.log(inputElement);
         inputElement.daterangepicker(this.targetOptions, this.callback.bind(this));
-        //(<any>$(this.input.nativeElement)).daterangepicker(this.targetOptions, this.callback.bind(this));
         this.datePicker = $(this.input.nativeElement).data('daterangepicker');
     }
     attachEvents() {
