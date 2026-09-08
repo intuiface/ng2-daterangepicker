@@ -19,6 +19,21 @@
   },
   "homepage": "https://github.com/evansmwendwa/ng2-daterangepicker#readme",
   "license": "MIT",
+  "module": "dist/ng2-daterangepicker/fesm2022/ng2-daterangepicker.mjs",
+  "typings": "dist/ng2-daterangepicker/index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    "./daterangepicker.component.css": {
+      "default": "./dist/ng2-daterangepicker/daterangepicker.component.css"
+    },
+    ".": {
+      "types": "./dist/ng2-daterangepicker/index.d.ts",
+      "default": "./dist/ng2-daterangepicker/fesm2022/ng2-daterangepicker.mjs"
+    }
+  },
+  "sideEffects": false,
   "devDependencies": {
     "@angular-devkit/core": "^20.3.36",
     "@angular-devkit/schematics": "^20.3.36",
