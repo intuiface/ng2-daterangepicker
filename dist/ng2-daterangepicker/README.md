@@ -1,6 +1,6 @@
 # Ng2Daterangepicker
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+This library is built with [Angular CLI](https://github.com/angular/angular-cli) version 21.
 
 ## Code scaffolding
 

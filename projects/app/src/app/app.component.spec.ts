@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { Daterangepicker } from '../../../ng2-daterangepicker/src/public-api';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -7,6 +8,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [Daterangepicker],
     }).compileComponents();
   });
 
@@ -16,16 +18,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'app'`, () => {
+  it('should initialize the event log', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('app');
+    expect(app.eventLog).toBe('');
   });
 
-  it('should render title', () => {
+  it('should render the demo title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('app app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('ng2-daterangepicker (Demos)');
   });
 });

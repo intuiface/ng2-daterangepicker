@@ -1,7 +1,7 @@
 import { Directive, AfterViewInit, Input, Output, EventEmitter, KeyValueDiffers, ElementRef, OnDestroy, DoCheck } from '@angular/core';
+import $ from 'jquery';
 import { DaterangepickerConfig } from './config.service';
 
-declare let $: any;
 import 'bootstrap-daterangepicker';
 
 
@@ -108,10 +108,9 @@ export class DaterangePickerComponent implements AfterViewInit, OnDestroy, DoChe
     }
 
     destroyPicker() {
-        try {
-            (<any>$(this.input.nativeElement)).data('daterangepicker').remove();
-        } catch(e) {
-            console.log(e.message);
+        const picker = (<any>$(this.input.nativeElement)).data('daterangepicker');
+        if (picker) {
+            picker.remove();
         }
     }
 
